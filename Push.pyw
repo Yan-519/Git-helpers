@@ -24,8 +24,8 @@ def submit_text():
         except subprocess.CalledProcessError as e:
             if messagebox.askyesno("Git Error", f"Git command failed:\n{e}\nWould you like to force push?"):
                 try:
+                    subprocess.run("exit 1", shell=True, check=True)
                     subprocess.run(["git", "push", "--force"], check=True)
-                    messagebox.showinfo("Success", "Changes pushed successfully.")
                 except subprocess.CalledProcessError as ex:
                     messagebox.showerror("Git Error", f"Git command failed:\n{e}")
 
