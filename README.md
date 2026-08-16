@@ -84,4 +84,4 @@ Feel free to suggest improvements or modifications to these helper tools.
 ---
 
 **Created by:** Yan-519  
-**Language:** Python (54%) & Batch (46%)
+**Language:** Batch (100%)
