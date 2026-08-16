@@ -11,6 +11,7 @@ set /p "commit_message=Commit message: "
 
 :empty_message
 if "%commit_message%"=="" (
+    echo.
     echo Commit message cannot be empty.
     set /p "commit_message=Commit message: "
 
@@ -18,7 +19,7 @@ if "%commit_message%"=="" (
 )
 
 echo.
-choice /C YN /M "Are you sure you want to save the update?"
+choice /C YN /M "Are you sure you want to push?"
 if errorlevel 2 exit /b 0
 
 echo.
