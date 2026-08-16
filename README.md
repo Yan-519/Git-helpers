@@ -10,75 +10,25 @@ The tools offer:
 - 🎯 Simple push and pull operations with user confirmations
 - ⚠️ Error handling with automatic retry options
 - 💪 Force push/pull capability as fallback options
-- 🖥️ Both GUI (Python) and CLI (Batch) interfaces
 
 ## Files
 
-### Push Operations
-- **`Push.pyw`** - Python GUI application for pushing changes
-  - Enter commit message via GUI dialog
-  - Adds all changes (`git add .`)
-  - Commits with your message
-  - Pushes to remote with force option if needed
-  
-- **`Push.bat`** - Command-line batch script for pushing changes
+### Push Operations **`Push.bat`**
+  - Command-line batch script for pushing changes
   - Interactive command-line prompts
   - Same workflow as Push.pyw but without GUI
   - Useful for automation and server environments
 
-### Pull Operations
-- **`Pull.pyw`** - Python GUI application for pulling changes
-  - Simple confirmation dialog
-  - Pulls latest changes from remote
-  - Offers force pull option on failure
-  
-- **`Pull.bat`** - Command-line batch script for pulling changes
+### Pull Operations **`Pull.bat`**
+  - Command-line batch script for pulling changes
   - Interactive command-line prompts
   - Same workflow as Pull.pyw but without GUI
 
-### Utilities
-- **`Create exe.bat`** - Build script to compile Python scripts into standalone .exe files
-  - Uses PyInstaller to create Windows executables
-  - Generates `Pull.exe` and `Push.exe`
-  - Cleans up temporary build files automatically
-  - Pre-built executables (`Pull.exe`, `Push.exe`) are included in the repository
-
-## Requirements
-
-### For Python Scripts (.pyw)
-- Python 3.6+
-- Git installed and accessible from command line
-
-### For Batch Scripts (.bat)
+## Requirements (For Batch Scripts [.bat])
 - Windows OS
 - Git installed and accessible from command line
 
-### For Building Executables
-- Python 3.6+
-- PyInstaller: `pip install pyinstaller`
-- Git installed
-
-## Usage
-
-### Using Python GUI Scripts
-
-1. **Push changes:**
-   ```bash
-   python Push.pyw
-   ```
-   - Enter your commit message in the dialog
-   - Confirm the commit and push
-   - If push fails, you'll be offered a force push option
-
-2. **Pull changes:**
-   ```bash
-   python Pull.pyw
-   ```
-   - Confirm the pull operation
-   - If pull fails, you'll be offered a force pull option
-
-### Using Batch Scripts
-
+## Using Batch Scripts
 1. **Push changes:**
    ```bash
    Push.bat
@@ -93,25 +43,6 @@ The tools offer:
    ```
    - Confirm the pull operation
    - Optional force pull if standard pull fails
-
-### Using Pre-built Executables
-
-Simply double-click or run from command line:
-- `Pull.exe` - Run pull operation with GUI
-- `Push.exe` - Run push operation with GUI
-
-### Building Executables
-
-To create Windows .exe files from the Python scripts:
-
-```bash
-Create exe.bat
-```
-
-This will:
-- Compile `Pull.pyw` → `Pull.exe`
-- Compile `Push.pyw` → `Push.exe`
-- Clean up temporary build files
 
 ## Features
 
@@ -145,10 +76,6 @@ Both tools include robust error handling:
 - Force push may overwrite remote changes
 - Force pull may discard local changes
 - Always ensure you have backups if using force operations on shared repositories
-
-## License
-
-This project is provided as-is for personal and educational use.
 
 ## Contributing
 
