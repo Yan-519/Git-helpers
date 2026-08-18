@@ -43,7 +43,7 @@ if "%has_changes%"=="1" (
     )
 )
 if "%has_changes%"=="0" (
-    echo "No changes found (skipping commit options)"
+    echo No changes found ^(skipping commit options^)
 )
 
 echo.
