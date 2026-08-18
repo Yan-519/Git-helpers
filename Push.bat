@@ -1,14 +1,18 @@
 @echo off
+setlocal
 
 echo =========================
 echo       Commit\Push
 echo =========================
 echo.
-
+ 
 set "has_changes=0"
 for /f "delims=" %%A in ('git status --porcelain') do set "has_changes=1"
 
+set "commit_message="""
+
 if "%has_changes%"=="1" (
+
     set /p "commit_message=Commit message: "
     
     :empty_message

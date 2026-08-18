@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 echo =========================
 echo          Commit
