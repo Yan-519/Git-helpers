@@ -41,7 +41,8 @@ if "%has_changes%"=="1" (
         pause
         exit /b 1
     )
-)else(
+)
+if "%has_changes%"=="0" (
     echo No changes found (skipping commit options)
 )
 
