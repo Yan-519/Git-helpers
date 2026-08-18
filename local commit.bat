@@ -5,6 +5,15 @@ echo          Commit
 echo =========================
 echo.
 
+set "has_changes=0"
+for /f "delims=" %%A in ('git status --porcelain') do set "has_changes=1"
+
+if "%has_changes%"=="0" (
+    echo No changes found
+    pause
+    exit /b 0
+)
+
 set /p "commit_message=Commit message: "
 
 :empty_message

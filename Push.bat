@@ -41,10 +41,11 @@ if "%has_changes%"=="1" (
         pause
         exit /b 1
     )
-    echo.
+)else(
+    echo No changes found (skipping commit options)
 )
 
-
+echo.
 choice /C YN /M "Are you sure you want to push?"
 if errorlevel 2 exit /b 0
 
