@@ -17,7 +17,7 @@ if "%commit_message%"=="" (
 )
 
 echo.
-choice /C YN /M "Are you sure you want to push?"
+choice /C YN /M "Are you sure you want to commit?"
 if errorlevel 2 exit /b 0
 
 echo.
@@ -37,3 +37,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+
+echo.
+echo Changes commited successfully.
+pause

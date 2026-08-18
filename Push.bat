@@ -21,6 +21,10 @@ if "%has_changes%"=="1" (
     )
     
     echo.
+    choice /C YN /M "Are you sure you want to commit?"
+    if errorlevel 2 exit /b 0
+    
+    echo.
     echo Adding files...
     git add .
     if errorlevel 1 (
